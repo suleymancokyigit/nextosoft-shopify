@@ -1,0 +1,33 @@
+<style>
+  .nx-faq{max-width:860px;margin:0 auto;padding:64px 24px}
+  .nx-faq details{border:1px solid #e4e8ee;border-radius:12px;padding:0 20px;margin-bottom:10px;background:#fff}
+  .nx-faq summary{cursor:pointer;padding:18px 0;font-weight:700;color:#20212d;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  .nx-faq summary::-webkit-details-marker{display:none}
+  .nx-faq summary::after{content:"+";color:#478ecc;font-size:1.4rem;font-weight:400}
+  .nx-faq details[open] summary::after{content:"–"}
+  .nx-faq details p{margin:0 0 18px;color:#697080;line-height:1.6}
+</style>
+<section class="nx-faq">
+  <h2 class="nx-h2" style="text-align:center">{{ section.settings.heading }}</h2>
+  <p class="nx-sub" style="text-align:center;margin:0 auto 28px">{{ section.settings.text }}</p>
+  {% for b in section.blocks %}<details {{ b.shopify_attributes }}><summary>{{ b.settings.q }}</summary><p>{{ b.settings.a }}</p></details>{% endfor %}
+</section>
+{% schema %}
+{
+  "name": "NX SSS",
+  "settings": [
+    {"type": "text", "id": "heading", "label": "Başlık", "default": "Sık sorulan sorular"},
+    {"type": "text", "id": "text", "label": "Metin", "default": "Sipariş, ödeme ve teslimat hakkında merak edilenler."}
+  ],
+  "blocks": [{"type": "q", "name": "Soru", "settings": [
+    {"type": "text", "id": "q", "label": "Soru"},
+    {"type": "textarea", "id": "a", "label": "Cevap"}
+  ]}],
+  "presets": [{"name": "NX SSS", "blocks": [
+    {"type": "q", "settings": {"q": "Fiyatlar kesin mi, sonradan değişir mi?", "a": "Ürün sayfasındaki fiyat belirtilen kapsam için başlangıç bedelidir ve KDV dahildir. Keşif görüşmesinde kapsam değişirse, üretim başlamadan önce yazılı onayınız alınır."}},
+    {"type": "q", "settings": {"q": "Ödeme nasıl yapılıyor?", "a": "Kredi kartı veya banka havalesi ile. Sipariş, ödeme onayından sonra üretim planına alınır."}},
+    {"type": "q", "settings": {"q": "Teslim süresi ne zaman başlar?", "a": "Keşif görüşmesinde planın onaylanmasıyla başlar. Gerekli içerik ve onayların zamanında sağlanması süreyi doğrudan etkiler."}},
+    {"type": "q", "settings": {"q": "İptal ve iade mümkün mü?", "a": "Üretim başlamadan önce iptal talepleri değerlendirilir. Üretim başladıysa tamamlanan iş hesaplanır ve varsa iade edilebilir bakiye yazılı olarak bildirilir. Detaylar İptal ve İade Politikası sayfasında."}}
+  ]}]
+}
+{% endschema %}

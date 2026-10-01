@@ -1,0 +1,43 @@
+<style>
+  .nx-feat{max-width:1200px;margin:0 auto;padding:24px 24px 64px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .nx-feat.rev .nx-feat__img{order:2}
+  .nx-feat__img img{width:100%;height:auto;border-radius:20px;display:block;box-shadow:0 24px 60px rgba(45,46,61,.18)}
+  .nx-feat ul{list-style:none;padding:0;margin:20px 0 28px;display:grid;gap:10px}
+  .nx-feat li{padding-left:28px;position:relative;color:#20212d}
+  .nx-feat li::before{content:"";position:absolute;left:0;top:.35em;width:16px;height:16px;border-radius:50%;background:linear-gradient(135deg,#478ecc,#765ebe)}
+  .nx-feat .nx-kicker{color:#478ecc;background:#eef4fb;border-color:#d6e5f5}
+  @media(max-width:900px){.nx-feat{grid-template-columns:1fr}.nx-feat.rev .nx-feat__img{order:0}}
+</style>
+<section class="nx-feat {% if section.settings.reverse %}rev{% endif %}">
+  <div class="nx-feat__img">
+    {%- if section.settings.image != blank -%}{{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy' }}{%- else -%}<img src="{{ section.settings.asset | asset_url }}" alt="" width="1600" height="800" loading="lazy">{%- endif -%}
+  </div>
+  <div>
+    <span class="nx-kicker">{{ section.settings.kicker }}</span>
+    <h2 class="nx-h2">{{ section.settings.heading }}</h2>
+    <p class="nx-sub" style="margin-bottom:0">{{ section.settings.text }}</p>
+    <ul>{% for b in section.blocks %}<li {{ b.shopify_attributes }}>{{ b.settings.text }}</li>{% endfor %}</ul>
+    <a class="nx-btn nx-btn--p" href="{{ section.settings.btn_url }}">{{ section.settings.btn }}</a>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "NX Öne çıkan",
+  "settings": [
+    {"type": "checkbox", "id": "reverse", "label": "Görsel sağda", "default": false},
+    {"type": "text", "id": "kicker", "label": "Üst etiket", "default": "Yapay zekâ ve otomasyon"},
+    {"type": "text", "id": "heading", "label": "Başlık", "default": "Tekrarlayan işleri yapay zekâya devredin"},
+    {"type": "textarea", "id": "text", "label": "Metin", "default": "Teklif hazırlama, müşteri yanıtları, raporlama… Bir iş sürecinizi güvenli ve ölçülebilir bir AI akışına dönüştürüyoruz."},
+    {"type": "image_picker", "id": "image", "label": "Görsel"},
+    {"type": "text", "id": "asset", "label": "Varsayılan görsel (asset)", "default": "nx-story-ai.webp"},
+    {"type": "text", "id": "btn", "label": "Buton", "default": "AI Otomasyon paketini gör"},
+    {"type": "text", "id": "btn_url", "label": "Bağlantı", "default": "/collections/ai"}
+  ],
+  "blocks": [{"type": "item", "name": "Madde", "settings": [{"type": "text", "id": "text", "label": "Metin"}]}],
+  "presets": [{"name": "NX Öne çıkan", "blocks": [
+    {"type": "item", "settings": {"text": "Süreç analizi ve tek otomasyon akışı"}},
+    {"type": "item", "settings": {"text": "Kurumsal verinize güvenli bağlantı"}},
+    {"type": "item", "settings": {"text": "Ekibinize kullanım eğitimi"}}
+  ]}]
+}
+{% endschema %}

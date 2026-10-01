@@ -1,115 +1,5 @@
 {
   "sections": {
-    "hero_jVaWmY": {
-      "type": "hero",
-      "blocks": {
-        "text_YLPk4p": {
-          "type": "text",
-          "name": "t:names.heading",
-          "settings": {
-            "text": "<h1>İşinizi büyütecek paketi bugün başlatın.</h1>",
-            "text_color": "#ffffff",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "h1",
-            "font": "var(--font-heading--family)",
-            "font_size": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "button_H9gpTf": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Paketleri inceleyin",
-            "link": "shopify://collections/all",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "custom_button_background": "rgba(0,0,0,0)",
-            "custom_button_text": "{{ settings.color_palette.background }}",
-            "custom_button_border": "{{ settings.color_palette.background }}",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        },
-        "text_alt": {
-          "type": "text",
-          "name": "t:names.heading",
-          "settings": {
-            "text": "<p>Net kapsam, başlangıç fiyatı ve teslim süresiyle hazırlanmış 10 profesyonel hizmet. Siparişinizi oluşturun, süreci tek numarayla takip edin.</p>",
-            "text_color": "#e4e8ee",
-            "width": "fit-content",
-            "max_width": "narrow",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_YLPk4p",
-        "text_alt",
-        "button_H9gpTf"
-      ],
-      "name": "t:names.hero",
-      "settings": {
-        "media_type_1": "image",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "space-between",
-        "vertical_alignment": "flex-end",
-        "align_baseline": true,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 24,
-        "section_width": "page-width",
-        "section_height": "medium",
-        "section_height_custom": 50,
-        "background_color": "#2d2e3d",
-        "toggle_overlay": false,
-        "overlay_color": "#12121266",
-        "overlay_style": "solid",
-        "gradient_direction": "to bottom",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 100,
-        "padding-block-end": 72
-      }
-    },
     "product_list_fa6P9H": {
       "type": "product-list",
       "blocks": {
@@ -430,11 +320,165 @@
       "block_order": [
         "group_Lg9LkF"
       ]
+    },
+    "nx_hero": {
+      "type": "nx-hero",
+      "settings": {}
+    },
+    "nx_stats": {
+      "type": "nx-stats",
+      "settings": {},
+      "blocks": {
+        "b0": {
+          "type": "stat",
+          "settings": {
+            "big": "10",
+            "small": "hazır hizmet paketi"
+          }
+        },
+        "b1": {
+          "type": "stat",
+          "settings": {
+            "big": "2 gün",
+            "small": "en hızlı teslim süresi"
+          }
+        },
+        "b2": {
+          "type": "stat",
+          "settings": {
+            "big": "%100",
+            "small": "KDV dahil, şeffaf fiyat"
+          }
+        },
+        "b3": {
+          "type": "stat",
+          "settings": {
+            "big": "7/24",
+            "small": "WhatsApp destek hattı"
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2",
+        "b3"
+      ]
+    },
+    "nx_steps": {
+      "type": "nx-steps",
+      "settings": {},
+      "blocks": {
+        "b0": {
+          "type": "step",
+          "settings": {
+            "title": "Paketinizi seçin",
+            "text": "Fiyatı, kapsamı ve teslim süresi belli 10 paketten ihtiyacınıza uyanı sepete ekleyin, güvenli ödeme yapın."
+          }
+        },
+        "b1": {
+          "type": "step",
+          "settings": {
+            "title": "Keşif görüşmesi",
+            "text": "24 saat içinde sizi arıyoruz. Hedefleri, içerikleri ve istisnaları birlikte netleştirip üretim planını onaylıyoruz."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "title": "Üretim ve teslimat",
+            "text": "Sipariş numaranızla süreci canlı takip edin. Teslimat sonrası kapsam dahilindeki revizyonlar plana dahil."
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2"
+      ]
+    },
+    "nx_feature": {
+      "type": "nx-feature",
+      "settings": {},
+      "blocks": {
+        "b0": {
+          "type": "item",
+          "settings": {
+            "text": "Süreç analizi ve tek otomasyon akışı"
+          }
+        },
+        "b1": {
+          "type": "item",
+          "settings": {
+            "text": "Kurumsal verinize güvenli bağlantı"
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "text": "Ekibinize kullanım eğitimi"
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2"
+      ]
+    },
+    "nx_cta": {
+      "type": "nx-cta",
+      "settings": {}
+    },
+    "nx_faq": {
+      "type": "nx-faq",
+      "settings": {},
+      "blocks": {
+        "b0": {
+          "type": "q",
+          "settings": {
+            "q": "Fiyatlar kesin mi, sonradan değişir mi?",
+            "a": "Ürün sayfasındaki fiyat belirtilen kapsam için başlangıç bedelidir ve KDV dahildir. Keşif görüşmesinde kapsam değişirse, üretim başlamadan önce yazılı onayınız alınır."
+          }
+        },
+        "b1": {
+          "type": "q",
+          "settings": {
+            "q": "Ödeme nasıl yapılıyor?",
+            "a": "Kredi kartı veya banka havalesi ile. Sipariş, ödeme onayından sonra üretim planına alınır."
+          }
+        },
+        "b2": {
+          "type": "q",
+          "settings": {
+            "q": "Teslim süresi ne zaman başlar?",
+            "a": "Keşif görüşmesinde planın onaylanmasıyla başlar. Gerekli içerik ve onayların zamanında sağlanması süreyi doğrudan etkiler."
+          }
+        },
+        "b3": {
+          "type": "q",
+          "settings": {
+            "q": "İptal ve iade mümkün mü?",
+            "a": "Üretim başlamadan önce iptal talepleri değerlendirilir. Üretim başladıysa tamamlanan iş hesaplanır ve varsa iade edilebilir bakiye yazılı olarak bildirilir. Detaylar İptal ve İade Politikası sayfasında."
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2",
+        "b3"
+      ]
     }
   },
   "order": [
-    "hero_jVaWmY",
+    "nx_hero",
+    "nx_stats",
     "collection_list_nx",
-    "product_list_fa6P9H"
+    "nx_steps",
+    "product_list_fa6P9H",
+    "nx_feature",
+    "nx_cta",
+    "nx_faq"
   ]
 }

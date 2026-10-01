@@ -1,0 +1,25 @@
+<style>
+  .nx-stats{max-width:1200px;margin:0 auto;padding:40px 24px 8px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .nx-stat{background:#f5f7fa;border:1px solid #e4e8ee;border-radius:14px;padding:22px 20px}
+  .nx-stat b{display:block;font:800 1.9rem/1.1 var(--font-heading--family,inherit);color:#2d2e3d;margin-bottom:6px}
+  .nx-stat span{color:#697080;font-size:.95rem}
+  @media(max-width:900px){.nx-stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+<div class="nx-stats">
+  {% for b in section.blocks %}<div class="nx-stat" {{ b.shopify_attributes }}><b>{{ b.settings.big }}</b><span>{{ b.settings.small }}</span></div>{% endfor %}
+</div>
+{% schema %}
+{
+  "name": "NX Rakamlar",
+  "blocks": [{"type": "stat", "name": "Rakam", "settings": [
+    {"type": "text", "id": "big", "label": "Büyük", "default": "10"},
+    {"type": "text", "id": "small", "label": "Küçük", "default": "hazır hizmet paketi"}
+  ]}],
+  "presets": [{"name": "NX Rakamlar", "blocks": [
+    {"type": "stat", "settings": {"big": "10", "small": "hazır hizmet paketi"}},
+    {"type": "stat", "settings": {"big": "2 gün", "small": "en hızlı teslim süresi"}},
+    {"type": "stat", "settings": {"big": "%100", "small": "KDV dahil, şeffaf fiyat"}},
+    {"type": "stat", "settings": {"big": "7/24", "small": "WhatsApp destek hattı"}}
+  ]}]
+}
+{% endschema %}

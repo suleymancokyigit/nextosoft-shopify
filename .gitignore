@@ -1,2 +1,3 @@
 kaynak/site/*.html
 __pycache__/
+.env
